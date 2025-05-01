@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F7C1D9D-0CCC-4A98-8CDB-894FD78DB95B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>player</RootNamespace>
+    <AssemblyName>Lavin24Player</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Lavin24Player.ico</ApplicationIcon>
+    <StartupObject>player.Program</StartupObject>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BoxedAppSDK.Managed">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Lavin24\Lavin24Player\Lavin24Player\Lavin24Player\BoxedAppSDK.Managed.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Lavin24\Lavin24Player\Lavin24Player\Lavin24Player\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceId">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Lavin24\Lavin24Player\Lavin24Player\Lavin24Player\DeviceId.dll</HintPath>
+    </Reference>
+    <Reference Include="LibVLCSharp">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Lavin24\Lavin24Player\Lavin24Player\Lavin24Player\LibVLCSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LibVLCSharp.WinForms">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Lavin24\Lavin24Player\Lavin24Player\Lavin24Player\LibVLCSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Lavin24\Lavin24Player\Lavin24Player\Lavin24Player\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Lavin24\Lavin24Player\Lavin24Player\Lavin24Player\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="Cache.cs" />
+    <Compile Include="Cipher.cs" />
+    <Compile Include="DecryptedChunk.cs" />
+    <Compile Include="frm_logout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_logout.Designer.cs">
+      <DependentUpon>frm_logout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lang\langres.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login2.Designer.cs">
+      <DependentUpon>login2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginBySMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginBySMS.Designer.cs">
+      <DependentUpon>LoginBySMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginByUsername.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginByUsername.Designer.cs">
+      <DependentUpon>LoginByUsername.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modula\ApiResponse.cs" />
+    <Compile Include="Modula\dataValidate.cs" />
+    <Compile Include="Modula\PublicVariable.cs" />
+    <Compile Include="Modula\SettingServer.cs" />
+    <Compile Include="Modula\SMScodeActivation.cs" />
+    <Compile Include="Modula\Subtitle.cs" />
+    <Compile Include="Modula\tokenResponse.cs" />
+    <Compile Include="Modula\ValidateToken.cs" />
+    <Compile Include="player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="player.Designer.cs">
+      <DependentUpon>player.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaylistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaylistForm.Designer.cs">
+      <DependentUpon>PlaylistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\WpWebServiceRepository.cs" />
+    <Compile Include="Service\ActivateService.cs" />
+    <Compile Include="Service\SMSService.cs" />
+    <Compile Include="Settingsfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settingsfrm.Designer.cs">
+      <DependentUpon>Settingsfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualFileStream.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frm_logout.resources" />
+    <EmbeddedResource Include="Lang\langres.resources" />
+    <EmbeddedResource Include="login.resources" />
+    <EmbeddedResource Include="login2.resources" />
+    <EmbeddedResource Include="LoginBySMS.resources" />
+    <EmbeddedResource Include="LoginByUsername.resources" />
+    <EmbeddedResource Include="player.resources" />
+    <EmbeddedResource Include="PlaylistForm.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="Settingsfrm.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
